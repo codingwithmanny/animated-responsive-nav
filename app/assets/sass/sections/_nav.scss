@@ -1,0 +1,38 @@
+#nav {
+  display: block;
+  overflow: hidden;
+
+  ul {
+    @include transitions(margin 300ms ease-out 0s);
+    // background: rgba(green, 0.5);
+    display: block;
+    list-style: none;
+    margin: -100% 0 0 0;
+    padding: 0;
+
+    li {
+      border-bottom: 1px solid $grey;
+
+      a {
+        color: $black;
+        display: block;
+        padding-left: $nav-padding-leftright;
+        padding-right: $nav-padding-leftright;
+        line-height: 44px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  ul.open {
+    margin-top: 0%;
+  }
+
+  @media (min-width: $break-medium) {
+    //insert code
+  }
+
+  @media (min-width: $break-large) {
+    //insert code
+  }
+}

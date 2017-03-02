@@ -1,0 +1,36 @@
+{
+  "name": "animated-responsive-nav",
+  "version": "1.0.0",
+  "description": "How to make an animated responsive navigation",
+  "main": "dist/index.html",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-pug": "^3.2.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mpineault/animated-responsive-nav.git"
+  },
+  "keywords": [
+    "responsive",
+    "template",
+    "website"
+  ],
+  "author": "Manuel Pineault",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mpineault/animated-responsive-nav/issues"
+  },
+  "homepage": "https://github.com/mpineault/animated-responsive-nav#readme"
+}

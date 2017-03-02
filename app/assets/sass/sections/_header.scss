@@ -1,0 +1,115 @@
+$svgheight: 44px;
+$nav-padding-leftright: 15px;
+$nav-padding-topbottom: 20px;
+$expandbutton-padding: 12px;
+
+#header {
+
+  h1 {
+    background: $white;
+    border-bottom: 1px solid $grey;
+    display: block;
+    margin: 0;
+    padding: $nav-padding-topbottom $nav-padding-leftright;
+
+    a {
+      display: inline-block;
+
+      span {
+        display: none;
+      }
+
+      svg {
+        display: block;
+        height: $svgheight;
+
+        path {
+          fill: $blue;
+        }
+      }
+    }
+  }
+
+  #expand {
+    // background: rgba(red, 0.5);
+    display: block;
+    height: $svgheight;
+    width: $svgheight;
+    position: absolute;
+    top: $nav-padding-topbottom;
+    right: ($nav-padding-leftright / 2);
+
+    .inner {
+      // background: rgba(blue, 0.3);
+      display: block;
+      width: ($svgheight - $expandbutton-padding);
+      height: ($svgheight - $expandbutton-padding);
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+    }
+
+    span {
+      background: $black;
+      display: block;
+      width: ($svgheight - $expandbutton-padding);
+      height: 2px;
+      position: absolute;
+      left: 6px;
+
+      &:nth-child(1) {
+        @include transitions((transform 150ms ease-out, top 0.2s ease-out 150ms, background 100ms));
+        @include transform(rotate(0deg));
+        top: ($expandbutton-padding / 2) + 4;
+      }
+
+      &:nth-child(2) {
+        @include transitions(opacity 0ms ease-out 150ms);
+        top: (($expandbutton-padding / 2)) + 4 + 2 + 9;
+      }
+
+      &:nth-child(3) {
+        @include transitions((transform 150ms ease-out, top 0.2s ease-out 150ms, background 100ms));
+        @include transform(rotate(0deg));
+        top: (($expandbutton-padding / 2)) + 4 + 4 + 18;
+      }
+    }
+  }
+
+  #expand.open {
+
+    span {
+
+      &:nth-child(1) {
+        @include transitions((top 150ms ease-out, transform 0.2s ease-out 150ms, background 100ms));
+        @include transform(rotate(45deg));
+        background: $blue;
+        top: ($svgheight / 2) - 2;
+      }
+
+      &:nth-child(2) {
+        opacity: 0.0;
+      }
+
+      &:nth-child(3) {
+        @include transitions((top 150ms ease-out, transform 0.2s ease-out 150ms, background 100ms));
+        @include transform(rotate(-45deg));
+        background: $blue;
+        top: ($svgheight / 2) - 2;
+      }
+    }
+  }
+
+  @media (min-width: $break-medium) {
+    h1 {
+      border: none;
+    }
+
+    #expand {
+      display: none;
+    }
+  }
+}

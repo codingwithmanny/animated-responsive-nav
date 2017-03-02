@@ -1,0 +1,26 @@
+body {
+
+  p {
+  }
+
+  a {
+    @include transitions($defaultanimation);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  #wrap {
+  }
+
+  @media (min-width: $break-medium) {
+    //insert code
+  }
+}
