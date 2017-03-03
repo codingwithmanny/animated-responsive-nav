@@ -30,6 +30,15 @@
 
   @media (min-width: $break-medium) {
     //insert code
+    ul {
+      display: block;
+      margin: 0;
+
+      li {
+        float: left;
+        border: none;
+      }
+    }
   }
 
   @media (min-width: $break-large) {

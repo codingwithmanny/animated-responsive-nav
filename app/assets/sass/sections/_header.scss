@@ -106,6 +106,7 @@ $expandbutton-padding: 12px;
   @media (min-width: $break-medium) {
     h1 {
       border: none;
+      float: left;
     }
 
     #expand {
