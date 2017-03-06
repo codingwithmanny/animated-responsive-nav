@@ -4,7 +4,6 @@
 
   ul {
     @include transitions(margin 300ms ease-out 0s);
-    // background: rgba(green, 0.5);
     display: block;
     list-style: none;
     margin: -100% 0 0 0;
@@ -15,6 +14,9 @@
 
       a {
         color: $black;
+        font-family: $font-league;
+        font-size: 9px;
+        letter-spacing: 5px;
         display: block;
         padding-left: $nav-padding-leftright;
         padding-right: $nav-padding-leftright;
@@ -29,7 +31,10 @@
   }
 
   @media (min-width: $break-medium) {
-    //insert code
+    padding-top: 38px;
+    padding-bottom: 38px;
+    margin-left: 190px;
+
     ul {
       display: block;
       margin: 0;
@@ -37,11 +42,20 @@
       li {
         float: left;
         border: none;
+
+        a {
+          display: block;
+
+          &:hover {
+            color: $blue;
+            text-decoration: none;
+          }
+
+          &:focus {
+            text-decoration: none;
+          }
+        }
       }
     }
-  }
-
-  @media (min-width: $break-large) {
-    //insert code
   }
 }

@@ -31,7 +31,6 @@ $expandbutton-padding: 12px;
   }
 
   #expand {
-    // background: rgba(red, 0.5);
     display: block;
     height: $svgheight;
     width: $svgheight;
@@ -40,7 +39,6 @@ $expandbutton-padding: 12px;
     right: ($nav-padding-leftright / 2);
 
     .inner {
-      // background: rgba(blue, 0.3);
       display: block;
       width: ($svgheight - $expandbutton-padding);
       height: ($svgheight - $expandbutton-padding);
@@ -107,10 +105,29 @@ $expandbutton-padding: 12px;
     h1 {
       border: none;
       float: left;
+      padding-top: 38px;
+      padding-bottom: 38px;
+
+      a {
+        display: block;
+
+        &:hover {
+          margin-top: -5px;
+          svg {
+
+          }
+        }
+      }
     }
 
     #expand {
       display: none;
     }
+  }
+
+  @media (min-width: $break-full + 70) {
+    margin-left: auto;
+    margin-right: auto;
+    width: $break-full;
   }
 }
